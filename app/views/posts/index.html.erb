@@ -7,9 +7,12 @@
     <div class="main">
       <div class="container">
         
-        <!-- Form goes here -->
+        <%= form_for(@new_post)
+         do |f| %>
+        <%= f.text_field :comment, :placeholder => "Share your thoughts" %>
+        <%= f.submit "Post", :class => "btn" %>
+        <% end %>
 
-        
         <ul class="comments">
           <li>Have you felt it?</li>
           <li>There has been an awakening.</li>
